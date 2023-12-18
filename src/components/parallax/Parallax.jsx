@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import './parallax.scss'
 import { motion , useScroll, useTransform} from 'framer-motion'
 
@@ -11,8 +11,8 @@ const ref = useRef()
     target:ref,
     offset:["start start","end start"]
   });
-
-const yBG = useTransform(scrollYProgress, [0,1], [0, 100]);
+  const yText = useTransform(scrollYProgress, [0,1], ["0%", "500%"]);
+const yBG = useTransform(scrollYProgress, [0,1], ["0%", "100%"]);
 
   return (
     <div className='parallax' 
@@ -24,11 +24,19 @@ const yBG = useTransform(scrollYProgress, [0,1], [0, 100]);
        "linear-gradient(180deg, #111132, #505064)"
     }}>
       <motion.h1
-      style={{y: yBG}}
+      style={{y: yText}}
       >{props.type === "services" ? "What We Do?" : "What We Did?"}</motion.h1>
       <motion.div className="mountains"></motion.div>
-      <motion.div className="planets"></motion.div>
-      <motion.div className="stars"></motion.div>
+      <motion.div 
+      className="planets"
+      style={{
+        y: yBG,
+        backgroundImage:`url(${props.type === "services" ? "/planets.png" : "/sun.png"})})`
+      }}
+      ></motion.div>
+      <motion.div 
+      style={{x: yBG}}
+      className="stars"></motion.div>
     </div>
   )
 }
