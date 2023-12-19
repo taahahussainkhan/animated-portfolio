@@ -1,6 +1,6 @@
-import React from 'react'
+import React ,{ useRef } from 'react'
 import './services.scss'
-import {motion} from 'framer-motion'
+import {motion, useInView} from 'framer-motion'
 
 const variants = {
     initial:{
@@ -20,39 +20,59 @@ const variants = {
 }
 
 export const Services = () => {
+    const ref = useRef();
+    const isInView = useInView(ref,{margin:"-100px"});
   return (
     <motion.div className='services' variants={variants}
     initial="initial" animate="animate" exit="initial">
         <motion.div className="textContainer"
         variants={variants}
-        initial="initial" animate="animate" exit="initial"
+        initial="initial" 
+        ref = {ref}
+        animate = {isInView && "animate"}
         >
             <p>I focus on helping your website render faster
                <br />and perform better for your users.</p> 
             <hr whileHover={{
-                background: "light"
+                background: "lightgray"
+
             }}/> 
         </motion.div>
         <motion.div className="titleContainer" 
         variants={variants}
-        initial="initial" animate="animate" exit="initial"
+        initial="initial" whileInView="animate" 
         >
             <div className="title">
                 <img src="/people.webp" alt=""/>
                 <h1>
-                    <b>Unique</b> Ideas
+                    <motion.b 
+                    whileHover = {{color:"orange",
+                    fontWeight:"bold"
+                }}
+                    >Unique</motion.b> Ideas
                 </h1>
             </div>
             <div className="title">
                 <h1>
-                    <b>For Your</b> Business
+                    <motion.b
+                    whileHover = {{color:"orange",
+                    fontWeight:"bold"
+                }}
+                    >
+                        For Your</motion.b> Business
                 </h1>
-                <button>WHAT WE DO?</button>
+                <motion.button
+                whileHover = {{
+                width:"310px",
+                height:"110px",
+                fontWeight:"bold"
+            }}
+                >WHAT WE DO?</motion.button>
             </div>
         </motion.div>
         <motion.div className="listContainer"
         variants={variants}
-        initial="initial" animate="animate" exit="initial"
+        initial="initial" whileInView="animate" 
         >
             <motion.div className="box" whileHover={{background: "lightgray",color:"black"}}>
                 <h2>
