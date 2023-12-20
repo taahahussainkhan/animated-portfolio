@@ -1,3 +1,4 @@
+
 .services{
     background: linear-gradient(180deg,#0c0c1d,#111132);
     height: 100%;
@@ -61,17 +62,35 @@
     display: flex;
     max-width: 1366px;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     .box{
-        padding: 50px;
-        border: 0.5px solid gray;
+        padding: 20px;
         display: flex;
         flex-direction: column;
+       // border-radius: 5px;
+        margin-left: 1px;
         justify-content: space-between;
         button{
-            padding: 10px;
+            margin-top: 30px;
+            padding: 8px;
             background-color: orange;
             border: none;
+            border-radius: 4px;
+            font-size:15px;
+            color: black;
             cursor: pointer;
+            transition: background 0.3s ease;
         }
+    }
+    // .go:hover{
+    //     width: 310px;
+    //     height: 39px;
+    // }
+    .box1{
+        background: linear-gradient(180deg, #262641, #38385c);
+    }
+    .box2{
+        background: linear-gradient(180deg, #303055, #444465);
     }
 }

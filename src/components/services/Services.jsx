@@ -74,41 +74,58 @@ export const Services = () => {
         variants={variants}
         initial="initial" whileInView="animate" 
         >
-            <motion.div className="box" whileHover={{background: "lightgray",color:"black"}}>
+            <motion.div className="box box1" whileHover={{ background: "lightgray",color:"black",scale: 1.1}}
+             transition={{ duration: 0.5, ease: 'easeInOut' }}>
                 <h2>
                     Branding
                 </h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsum eius excepturi quos, at soluta minima culpa explicabo? Eaque magnam a asperiores vitae enim doloremque dicta, eum sapiente accusamus architecto.
                 </p>
-                <button>Go</button>
+                <motion.button className='go'
+                 whileHover={{ scale: 1.05 }}
+                 transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >Go</motion.button>
             </motion.div>
-            <motion.div className="box" whileHover={{background: "lightgray",color:"black"}}>
+            <motion.div className="box box2" whileHover={{ background: "lightgray",color:"black",scale: 1.1}}
+             transition={{ duration: 0.5, ease: 'easeInOut' }}>
                 <h2>
-                    Branding
+                   Development
                 </h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsum eius excepturi quos, at soluta minima culpa explicabo? Eaque magnam a asperiores vitae enim doloremque dicta, eum sapiente accusamus architecto.
                 </p>
-                <button>Go</button>
+                <motion.button className='go'
+                 whileHover={{ scale: 1.05 }}
+                 transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >Go</motion.button>
             </motion.div>
-            <motion.div className="box" whileHover={{background: "lightgray", color:"black" }}>
+            <motion.div className="box box1 " whileHover={{ background: "lightgray",color:"black",scale: 1.1}}
+             transition={{ duration: 0.5, ease: 'easeInOut' }}>
                 <h2>
                     Branding
                 </h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsum eius excepturi quos, at soluta minima culpa explicabo? Eaque magnam a asperiores vitae enim doloremque dicta, eum sapiente accusamus architecto.
                 </p>
-                <button>Go</button>
+                <motion.button className='go'
+                 whileHover={{ scale: 1.05 }}
+                 transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >Go</motion.button>
             </motion.div>
-            <motion.div className="box" whileHover={{ background: "lightgray",color:"black"}}>
+            <motion.div className="box box2" whileHover={{ background: "lightgray",color:"black",scale: 1.1}}
+             transition={{ duration: 0.5, ease: 'easeInOut' }}
+            >
                 <h2>
                     Branding
                 </h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsum eius excepturi quos, at soluta minima culpa explicabo? Eaque magnam a asperiores vitae enim doloremque dicta, eum sapiente accusamus architecto.
                 </p>
-                <button>Go</button>
+                <motion.button className='go'
+                whileHover={{ scale: 1.05 }}
+                 transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >Go</motion.button>
             </motion.div>
         </motion.div>
     </motion.div>

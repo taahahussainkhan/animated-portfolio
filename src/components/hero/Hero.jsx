@@ -76,9 +76,9 @@ export const Hero = () => {
       >
         Software Developer, Web Developer, Frontend Developer, Backend Developer
       </motion.div>
-      <div className="imageContainer">
-        <img src="/hero.png" alt="" srcset="" />
-      </div>
+      {/* <div className="imageContainer">
+        //<img src="/hero.png" alt="" srcset="" />
+      </div> */}
     </div>
   );
 };
